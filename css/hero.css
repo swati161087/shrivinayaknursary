@@ -1,0 +1,20 @@
+/* ===== hero.css — hero banner and feature strip ===== */
+.hero{position:relative;padding:110px 0 100px;color:#fff;overflow:hidden;
+  background:radial-gradient(circle at 80% 20%,rgba(255,255,255,.12),transparent 40%),linear-gradient(135deg,#0f3d27 0%,#1b6b45 55%,#2fa56a 100%)}
+.hero::after{content:"🌿";position:absolute;right:-30px;bottom:-60px;font-size:20rem;opacity:.08;transform:rotate(-15deg)}
+.hero .container{position:relative;z-index:1;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.2rem,5vw,3.7rem);line-height:1.1;margin-bottom:16px}
+.hero h1 span{color:#ffd978}
+.hero p{font-size:1.1rem;color:#dff3e7;max-width:520px;margin-bottom:28px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-card{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:24px;padding:28px;backdrop-filter:blur(6px)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.stat b{display:block;font-size:2rem;color:#ffd978}
+.stat span{font-size:.9rem;color:#dff3e7}
+
+.features{padding:0;margin-top:-44px;position:relative;z-index:2}
+.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.feature{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;text-align:center}
+.feature .ic{font-size:2rem}
+.feature h3{font-size:1rem;color:var(--green-900);margin:6px 0 2px}
+.feature p{font-size:.85rem;color:var(--muted)}

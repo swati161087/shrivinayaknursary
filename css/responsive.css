@@ -1,0 +1,13 @@
+/* ===== responsive.css — public site breakpoints ===== */
+@media(max-width:900px){
+  .hero .container,.contact-grid,.foot-grid{grid-template-columns:1fr}
+  .feature-grid{grid-template-columns:1fr 1fr}
+  .slide{aspect-ratio:4/3;font-size:6rem}
+  .menu{position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:8px 0;border-bottom:1px solid #e8efe9;display:none}
+  .menu.open{display:flex}
+  .menu li{width:100%}.menu a{display:block;padding:12px 6%}
+  .menu a.btn{display:inline-flex;margin:8px 6%}
+  .burger{display:block}
+  section{padding:60px 0}
+  .topbar .container span:last-child{display:none}
+}

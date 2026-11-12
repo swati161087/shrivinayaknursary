@@ -1,0 +1,14 @@
+/* ===== buttons.css ===== */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:999px;border:2px solid transparent;font-weight:600;font-size:.95rem;cursor:pointer;transition:.2s;font-family:inherit}
+.btn:disabled{opacity:.6;cursor:not-allowed;transform:none!important}
+.btn-primary{background:var(--green-600);color:#fff}
+.btn-primary:hover{background:var(--green-700);transform:translateY(-2px)}
+.btn-light{background:#fff;color:var(--green-700)}
+.btn-light:hover{transform:translateY(-2px)}
+.btn-outline{border-color:var(--green-600);color:var(--green-700);background:transparent}
+.btn-outline:hover{background:var(--green-600);color:#fff}
+.btn-wa{background:#25d366;color:#fff}
+.btn-wa:hover{background:#1ebe5a;transform:translateY(-2px)}
+.btn-danger{background:#fff;border-color:#e3b5af;color:var(--danger)}
+.btn-danger:hover{background:var(--danger);border-color:var(--danger);color:#fff}
+.btn-sm{padding:6px 12px;font-size:.8rem}

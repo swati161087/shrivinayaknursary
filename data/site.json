@@ -1,0 +1,311 @@
+{
+  "contact": {
+    "phone": "+91 XXXXX XXXXX",
+    "whatsapp": "91XXXXXXXXXX",
+    "email": "info@yourdomain.com",
+    "address": "Your nursery address, City, State – PIN",
+    "hours": "Mon – Sun: 8:00 AM – 7:00 PM",
+    "mapEmbed": ""
+  },
+  "plants": [
+    {
+      "id": "p1",
+      "n": "Money Plant",
+      "s": "Epipremnum aureum",
+      "c": "Indoor",
+      "e": "🪴",
+      "d": "Hardy trailing plant, grows in soil or water.",
+      "price": "",
+      "img": "",
+      "tag": "Bestseller"
+    },
+    {
+      "id": "p2",
+      "n": "Snake Plant",
+      "s": "Sansevieria trifasciata",
+      "c": "Indoor",
+      "e": "🌿",
+      "d": "Low-maintenance, air-purifying and drought tolerant.",
+      "price": "",
+      "img": "",
+      "tag": "Bestseller"
+    },
+    {
+      "id": "p3",
+      "n": "Peace Lily",
+      "s": "Spathiphyllum",
+      "c": "Indoor",
+      "e": "🤍",
+      "d": "Elegant white blooms; thrives in indoor light.",
+      "price": "",
+      "img": "",
+      "tag": ""
+    },
+    {
+      "id": "p4",
+      "n": "Monstera Deliciosa",
+      "s": "Monstera deliciosa",
+      "c": "Indoor",
+      "e": "🍃",
+      "d": "Statement plant with large split leaves.",
+      "price": "",
+      "img": "",
+      "tag": "Popular"
+    },
+    {
+      "id": "p5",
+      "n": "ZZ Plant",
+      "s": "Zamioculcas zamiifolia",
+      "c": "Indoor",
+      "e": "🌱",
+      "d": "Glossy leaves; perfect for beginners.",
+      "price": "",
+      "img": "",
+      "tag": ""
+    },
+    {
+      "id": "p6",
+      "n": "Areca Palm",
+      "s": "Dypsis lutescens",
+      "c": "Indoor",
+      "e": "🌴",
+      "d": "Feathery tropical palm for living rooms.",
+      "price": "",
+      "img": "",
+      "tag": ""
+    },
+    {
+      "id": "p7",
+      "n": "Aglaonema (Chinese Evergreen)",
+      "s": "Aglaonema",
+      "c": "Indoor",
+      "e": "🌺",
+      "d": "Colourful foliage, tolerates low light.",
+      "price": "",
+      "img": "",
+      "tag": ""
+    },
+    {
+      "id": "p8",
+      "n": "Lucky Bamboo",
+      "s": "Dracaena sanderiana",
+      "c": "Indoor",
+      "e": "🎋",
+      "d": "Symbol of good luck; great for gifting.",
+      "price": "",
+      "img": "",
+      "tag": ""
+    },
+    {
+      "id": "p9",
+      "n": "Areca Palm (Garden)",
+      "s": "Dypsis lutescens",
+      "c": "Outdoor",
+      "e": "🌴",
+      "d": "Tall privacy screen and garden accent.",
+      "price": "",
+      "img": "",
+      "tag": ""
+    },
+    {
+      "id": "p10",
+      "n": "Ficus (Weeping Fig)",
+      "s": "Ficus benjamina",
+      "c": "Outdoor",
+      "e": "🌳",
+      "d": "Dense evergreen for hedges and shade.",
+      "price": "",
+      "img": "",
+      "tag": ""
+    },
+    {
+      "id": "p11",
+      "n": "Bougainvillea",
+      "s": "Bougainvillea glabra",
+      "c": "Outdoor",
+      "e": "💐",
+      "d": "Vibrant papery blooms for walls and gates.",
+      "price": "",
+      "img": "",
+      "tag": "Popular"
+    },
+    {
+      "id": "p12",
+      "n": "Tecoma / Golden Trumpet",
+      "s": "Tecoma stans",
+      "c": "Outdoor",
+      "e": "🌼",
+      "d": "Bright yellow flowers; loves full sun.",
+      "price": "",
+      "img": "",
+      "tag": ""
+    },
+    {
+      "id": "p13",
+      "n": "Bamboo Plants",
+      "s": "Bambusa",
+      "c": "Outdoor",
+      "e": "🎍",
+      "d": "Fast-growing natural screen.",
+      "price": "",
+      "img": "",
+      "tag": ""
+    },
+    {
+      "id": "p14",
+      "n": "Rose (Gulab)",
+      "s": "Rosa",
+      "c": "Flowering",
+      "e": "🌹",
+      "d": "Classic fragrant roses in assorted colours.",
+      "price": "",
+      "img": "",
+      "tag": "Bestseller"
+    },
+    {
+      "id": "p15",
+      "n": "Hibiscus (Gudhal)",
+      "s": "Hibiscus rosa-sinensis",
+      "c": "Flowering",
+      "e": "🌺",
+      "d": "Large showy flowers almost all year.",
+      "price": "",
+      "img": "",
+      "tag": ""
+    },
+    {
+      "id": "p16",
+      "n": "Jasmine (Mogra / Chameli)",
+      "s": "Jasminum",
+      "c": "Flowering",
+      "e": "🤍",
+      "d": "Intensely fragrant white blossoms.",
+      "price": "",
+      "img": "",
+      "tag": ""
+    },
+    {
+      "id": "p17",
+      "n": "Marigold (Genda)",
+      "s": "Tagetes",
+      "c": "Flowering",
+      "e": "🌻",
+      "d": "Festive favourite; easy seasonal colour.",
+      "price": "",
+      "img": "",
+      "tag": ""
+    },
+    {
+      "id": "p18",
+      "n": "Chrysanthemum (Guldaudi)",
+      "s": "Chrysanthemum",
+      "c": "Flowering",
+      "e": "🌸",
+      "d": "Winter-season blooms in many shades.",
+      "price": "",
+      "img": "",
+      "tag": ""
+    },
+    {
+      "id": "p19",
+      "n": "Jade Plant",
+      "s": "Crassula ovata",
+      "c": "Succulents",
+      "e": "🍀",
+      "d": "Lucky succulent, minimal watering.",
+      "price": "",
+      "img": "",
+      "tag": ""
+    },
+    {
+      "id": "p20",
+      "n": "Aloe Vera",
+      "s": "Aloe barbadensis",
+      "c": "Succulents",
+      "e": "🪴",
+      "d": "Medicinal, hardy and easy to grow.",
+      "price": "",
+      "img": "",
+      "tag": "Popular"
+    },
+    {
+      "id": "p21",
+      "n": "Assorted Succulents",
+      "s": "Mixed",
+      "c": "Succulents",
+      "e": "🌵",
+      "d": "Mini succulents for desks and gifting.",
+      "price": "",
+      "img": "",
+      "tag": ""
+    },
+    {
+      "id": "p22",
+      "n": "Tulsi (Holy Basil)",
+      "s": "Ocimum tenuiflorum",
+      "c": "Herbs & Veg",
+      "e": "🌿",
+      "d": "Sacred and medicinal; a household essential.",
+      "price": "",
+      "img": "",
+      "tag": "Bestseller"
+    },
+    {
+      "id": "p23",
+      "n": "Curry Leaf (Kadi Patta)",
+      "s": "Murraya koenigii",
+      "c": "Herbs & Veg",
+      "e": "🍃",
+      "d": "Fresh leaves for everyday cooking.",
+      "price": "",
+      "img": "",
+      "tag": ""
+    },
+    {
+      "id": "p24",
+      "n": "Lemon Plant",
+      "s": "Citrus limon",
+      "c": "Herbs & Veg",
+      "e": "🍋",
+      "d": "Fruiting plant for terrace and garden.",
+      "price": "",
+      "img": "",
+      "tag": ""
+    },
+    {
+      "id": "p25",
+      "n": "Ceramic & Terracotta Pots",
+      "s": "Assorted sizes",
+      "c": "Pots & Supplies",
+      "e": "🏺",
+      "d": "Decorative and classic pots in many sizes.",
+      "price": "",
+      "img": "",
+      "tag": ""
+    },
+    {
+      "id": "p26",
+      "n": "Garden Soil Mix & Cocopeat",
+      "s": "Growing media",
+      "c": "Pots & Supplies",
+      "e": "🟤",
+      "d": "Ready-to-use potting mix for healthy roots.",
+      "price": "",
+      "img": "",
+      "tag": ""
+    },
+    {
+      "id": "p27",
+      "n": "Organic Manure & Fertilisers",
+      "s": "Vermicompost, cow manure…",
+      "c": "Pots & Supplies",
+      "e": "🌾",
+      "d": "Nutrition to keep your plants thriving.",
+      "price": "",
+      "img": "",
+      "tag": ""
+    }
+  ],
+  "gallery": [],
+  "videos": []
+}

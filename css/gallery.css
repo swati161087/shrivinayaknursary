@@ -1,0 +1,18 @@
+/* ===== gallery.css — photo carousel ===== */
+#gallery{background:#fff}
+.carousel{position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--shadow);background:#0f3d27;user-select:none}
+.track{display:flex;transition:transform .6s ease}
+.slide{min-width:100%;position:relative;aspect-ratio:16/7;display:grid;place-items:center;font-size:9rem;overflow:hidden;background:#0f3d27}
+.slide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.slide .cap{position:absolute;left:0;right:0;bottom:0;padding:50px 32px 24px;background:linear-gradient(transparent,rgba(0,0,0,.65));color:#fff;z-index:2;font-size:1.15rem;font-weight:600}
+.slide .cap small{display:block;font-weight:400;font-size:.88rem;opacity:.9}
+.arrow{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;border:0;background:rgba(255,255,255,.9);color:var(--green-900);font-size:1.3rem;cursor:pointer;z-index:5;box-shadow:0 4px 12px rgba(0,0,0,.2)}
+.arrow:hover{background:#fff}
+.prev{left:16px}.next{right:16px}
+.dots{position:absolute;bottom:12px;right:20px;display:flex;gap:8px;z-index:5}
+.dot{width:10px;height:10px;border-radius:50%;border:0;background:rgba(255,255,255,.5);cursor:pointer;padding:0}
+.dot.active{background:#fff;width:26px;border-radius:6px}
+.thumbs{display:flex;gap:10px;margin-top:14px;overflow-x:auto;padding-bottom:4px}
+.thumbs button{flex:0 0 auto;width:90px;height:60px;border-radius:10px;border:2px solid transparent;cursor:pointer;font-size:1.7rem;display:grid;place-items:center;position:relative;overflow:hidden;padding:0;background:#1b6b45}
+.thumbs button img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.thumbs button.active{border-color:var(--green-600)}

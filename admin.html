@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Admin | Shri Vinayak Nursery</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/ganesha-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/ganesha-192.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0f3d27">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/buttons.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin">
+
+<!-- Shown when the admin server is not running -->
+<div class="login-wrap" id="offlineView" hidden>
+  <div class="login-card">
+    <h1><img class="brand-icon" src="assets/ganesha-192.png" alt="" width="34" height="34"> Admin needs the server</h1>
+    <p class="sub" style="margin-top:8px">This page can only save photos and videos when the small website server is running.</p>
+    <div class="notice">
+      1. Install <b>Node.js</b> (free, nodejs.org).<br>
+      2. Double-click <code>start-server.bat</code> (or run <code>node server.js</code>).<br>
+      3. Open <code>http://localhost:3000/admin.html</code>.
+    </div>
+  </div>
+</div>
+
+<!-- Login -->
+<div class="login-wrap" id="loginView" hidden>
+  <form class="login-card" id="loginForm">
+    <h1><img class="brand-icon" src="assets/ganesha-192.png" alt="" width="34" height="34"> Shri Vinayak Nursery</h1>
+    <p class="sub">Admin login</p>
+    <div class="field"><label for="loginPw">Password</label><input id="loginPw" type="password" autocomplete="current-password" required autofocus></div>
+    <div class="msg" id="loginMsg" role="alert"></div>
+    <button class="btn btn-primary" type="submit">Log in</button>
+  </form>
+</div>
+
+<!-- Dashboard -->
+<div id="appView" hidden>
+  <div class="admin-top"><div class="inner">
+    <span class="brand"><img class="brand-icon" src="assets/ganesha-192.png" alt="" width="30" height="30"> Shri Vinayak Nursery — Admin</span>
+    <span class="actions"><a class="link" href="index.html" target="_blank" rel="noopener">View website ↗</a><button class="btn" id="logoutBtn" type="button">Log out</button></span>
+  </div></div>
+
+  <div class="admin-wrap">
+    <div class="admin-tabs" id="adminTabs" role="tablist">
+      <button data-tab="photos" class="active">📷 Photos</button>
+      <button data-tab="videos">🎬 Videos</button>
+      <button data-tab="plants">🪴 Plants</button>
+      <button data-tab="contact">📞 Contact details</button>
+      <button data-tab="settings">🔒 Password</button>
+    </div>
+
+    <!-- PHOTOS -->
+    <section class="panel" id="tab-photos" style="padding:28px">
+      <h2>Photo gallery (carousel)</h2>
+      <p class="hint">Photos are saved into the <code>images</code> folder and appear in the website carousel. Large photos are resized automatically.</p>
+      <form id="photoForm">
+        <div class="field"><label for="photoFile">Choose photo(s)</label><input id="photoFile" type="file" accept="image/jpeg,image/png,image/webp,image/gif" multiple required></div>
+        <div class="row">
+          <div class="field"><label for="photoTitle">Title (optional)</label><input id="photoTitle" maxlength="120" placeholder="e.g. Our flowering section"></div>
+          <div class="field"><label for="photoCaption">Caption (optional)</label><input id="photoCaption" maxlength="200"></div>
+        </div>
+        <p class="hint">When you select several photos, the title and caption are left empty — you can edit them below.</p>
+        <button class="btn btn-primary" type="submit" id="photoBtn">⬆ Upload photo(s)</button>
+        <div class="progress" id="photoBar" hidden><div></div></div>
+        <div class="progress-label" id="photoLabel"></div>
+      </form>
+      <h3>Current photos</h3>
+      <div class="items" id="photoList"></div>
+    </section>
+
+    <!-- VIDEOS -->
+    <section class="panel" id="tab-videos" hidden>
+      <h2>Videos of our work</h2>
+      <p class="hint">Upload a video file (saved into the <code>videos</code> folder) or paste a YouTube link. Tip: YouTube links are best for long videos.</p>
+      <form id="videoForm">
+        <div class="toggle-row">
+          <label><input type="radio" name="vsrc" value="file" checked> Upload a video file</label>
+          <label><input type="radio" name="vsrc" value="youtube"> YouTube link</label>
+        </div>
+        <div class="field" id="vFileWrap"><label for="vFile">Video file (mp4, webm, mov — up to 500 MB)</label><input id="vFile" type="file" accept="video/mp4,video/webm,video/quicktime,.mp4,.webm,.mov,.m4v"></div>
+        <div class="field" id="vLinkWrap" hidden><label for="vLink">YouTube link</label><input id="vLink" placeholder="https://www.youtube.com/watch?v=..."></div>
+        <div class="row">
+          <div class="field"><label for="vTitle">Title *</label><input id="vTitle" maxlength="120" required placeholder="e.g. Garden landscaping – Sector 62"></div>
+          <div class="field"><label for="vDesc">Description</label><input id="vDesc" maxlength="300"></div>
+        </div>
+        <button class="btn btn-primary" type="submit" id="videoBtn">⬆ Add video</button>
+        <div class="progress" id="videoBar" hidden><div></div></div>
+        <div class="progress-label" id="videoLabel"></div>
+      </form>
+      <h3>Current videos</h3>
+      <div class="items" id="videoList"></div>
+    </section>
+
+    <!-- PLANTS -->
+    <section class="panel" id="tab-plants" hidden>
+      <h2>Plant catalogue</h2>
+      <p class="hint">Add, edit or remove plants shown in the website catalogue. Photos are saved into the <code>images</code> folder.</p>
+      <form id="plantForm">
+        <input type="hidden" id="pId">
+        <div class="row">
+          <div class="field"><label for="pName">Plant name *</label><input id="pName" maxlength="120" required></div>
+          <div class="field"><label for="pSci">Scientific / other name</label><input id="pSci" maxlength="120"></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="pCat">Category *</label><input id="pCat" list="catList" maxlength="60" required placeholder="Indoor, Outdoor, Flowering…"><datalist id="catList"></datalist></div>
+          <div class="field"><label for="pPrice">Price (optional)</label><input id="pPrice" maxlength="40" placeholder="₹250 — leave empty for “Price on request”"></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="pTag">Badge (optional)</label><input id="pTag" maxlength="30" placeholder="Bestseller, Popular, New…"></div>
+          <div class="field"><label for="pEmoji">Emoji (shown when there is no photo)</label><input id="pEmoji" maxlength="8" placeholder="🪴"></div>
+        </div>
+        <div class="field"><label for="pDesc">Short description</label><textarea id="pDesc" maxlength="400" style="min-height:70px"></textarea></div>
+        <div class="field"><label for="pFile">Photo (optional)</label><input id="pFile" type="file" accept="image/jpeg,image/png,image/webp,image/gif"><span class="hint" id="pFileHint"></span></div>
+        <button class="btn btn-primary" type="submit" id="plantBtn">➕ Add plant</button>
+        <button class="btn btn-outline" type="button" id="plantCancel" hidden>Cancel editing</button>
+        <div class="progress-label" id="plantLabel"></div>
+      </form>
+      <h3>All plants (<span id="plantCount">0</span>)</h3>
+      <div class="table-scroll"><table class="plant-table"><thead><tr><th></th><th>Name</th><th>Category</th><th>Price</th><th></th></tr></thead><tbody id="plantList"></tbody></table></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="panel" id="tab-contact" hidden>
+      <h2>Contact details</h2>
+      <p class="hint">These appear in the top bar, contact section, footer, WhatsApp button and quotation form.</p>
+      <form id="contactForm">
+        <div class="row">
+          <div class="field"><label for="cPhone">Phone number</label><input id="cPhone" maxlength="40" placeholder="+91 98765 43210"></div>
+          <div class="field"><label for="cWa">WhatsApp number</label><input id="cWa" maxlength="40" placeholder="919876543210"><span class="hint">Country code + number, digits only.</span></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="cEmail">Email</label><input id="cEmail" type="email" maxlength="120"></div>
+          <div class="field"><label for="cHours">Opening hours</label><input id="cHours" maxlength="120"></div>
+        </div>
+        <div class="field"><label for="cAddress">Address</label><textarea id="cAddress" maxlength="300" style="min-height:70px"></textarea></div>
+        <div class="field"><label for="cMap">Google Maps embed (optional)</label><textarea id="cMap" style="min-height:70px" placeholder='Paste the whole <iframe ...> code from Google Maps → Share → Embed a map'></textarea></div>
+        <button class="btn btn-primary" type="submit">💾 Save contact details</button>
+      </form>
+    </section>
+
+    <!-- SETTINGS -->
+    <section class="panel" id="tab-settings" hidden>
+      <h2>Change admin password</h2>
+      <form id="pwForm" autocomplete="off">
+        <div class="field"><label for="pwCur">Current password</label><input id="pwCur" type="password" autocomplete="current-password" required></div>
+        <div class="row">
+          <div class="field"><label for="pwNew">New password (min 8 characters)</label><input id="pwNew" type="password" minlength="8" autocomplete="new-password" required></div>
+          <div class="field"><label for="pwNew2">Confirm new password</label><input id="pwNew2" type="password" minlength="8" autocomplete="new-password" required></div>
+        </div>
+        <div class="notice" id="pwEnvNote" hidden>The password is set through the <code>ADMIN_PASSWORD</code> environment variable, so it can't be changed here.</div>
+        <button class="btn btn-primary" type="submit" id="pwBtn">Update password</button>
+      </form>
+    </section>
+  </div>
+</div>
+
+<div class="toast" id="toast" hidden></div>
+
+<script src="js/utils.js"></script>
+<script src="js/defaults.js"></script>
+<script src="js/content.js"></script>
+<script src="js/admin/core.js"></script>
+<script src="js/admin/photos.js"></script>
+<script src="js/admin/videos.js"></script>
+<script src="js/admin/plants.js"></script>
+<script src="js/admin/contact.js"></script>
+<script src="js/admin/settings.js"></script>
+<script src="js/admin/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "name": "shri-vinayak-nursery",
+  "version": "1.0.0",
+  "description": "Website and admin panel for Shri Vinayak Nursery",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=16" },
+  "license": "UNLICENSED",
+  "private": true
+}

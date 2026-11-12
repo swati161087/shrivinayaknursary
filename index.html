@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shri Vinayak Nursery | Plants, Garden Landscaping &amp; Quotations</title>
+<meta name="description" content="Shri Vinayak Nursery – indoor, outdoor, flowering plants, succulents, herbs, pots and landscaping services. Browse our catalogue and request a quotation.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/ganesha-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/ganesha-192.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0f3d27">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<header>
+  <div class="topbar"><div class="container">
+    <span id="tb-phone">📞</span><span>🌱 Quality plants • Landscaping • Bulk orders welcome</span>
+  </div></div>
+  <div class="container">
+    <nav>
+      <a href="#home" class="logo"><img class="brand-icon brand-icon-lg" src="assets/ganesha-192.png" alt="" width="44" height="44"><div>Shri Vinayak Nursery<small>PLANTS • GARDENS • LANDSCAPING</small></div></a>
+      <button class="burger" id="burger" aria-label="Menu">☰</button>
+      <ul class="menu" id="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#catalogue">Catalogue</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#videos">Our Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact" class="btn btn-primary">Get Quotation</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container">
+    <div>
+      <span class="eyebrow" style="color:#ffd978">Welcome to</span>
+      <h1>Shri Vinayak <span>Nursery</span></h1>
+      <p>Healthy, farm-grown plants for your home, office and garden — from easy-care indoor greens to flowering beauties, along with pots, soil and professional landscaping.</p>
+      <div class="hero-actions">
+        <a href="#catalogue" class="btn btn-light">Browse Catalogue</a>
+        <a href="#contact" class="btn btn-outline" style="color:#fff;border-color:#fff">Request a Quotation</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="stats">
+        <div class="stat"><b>500+</b><span>Plant varieties</span></div>
+        <div class="stat"><b>10+ yrs</b><span>Of experience</span></div>
+        <div class="stat"><b>1000+</b><span>Happy customers</span></div>
+        <div class="stat"><b>Bulk</b><span>Orders &amp; projects</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="features"><div class="container">
+  <div class="feature-grid">
+    <div class="feature"><div class="ic">🌱</div><h3>Healthy Plants</h3><p>Nursery-grown &amp; well maintained</p></div>
+    <div class="feature"><div class="ic">🏡</div><h3>Garden Landscaping</h3><p>Home, office &amp; society gardens</p></div>
+    <div class="feature"><div class="ic">🚚</div><h3>Delivery Available</h3><p>Safe packing &amp; transport</p></div>
+    <div class="feature"><div class="ic">💬</div><h3>Plant Care Advice</h3><p>Guidance for every plant</p></div>
+  </div>
+</div></section>
+
+<!-- CATALOGUE -->
+<section id="catalogue">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Our Catalogue</span>
+      <h2 class="title">Plants for Every Space</h2>
+      <p class="sub">Browse our collection and tap “Add to Quote” on anything you like — we’ll send you the best price.</p>
+    </div>
+    <div class="toolbar">
+      <div class="tabs" id="tabs"></div>
+      <input type="search" class="search" id="search" placeholder="🔍 Search plants…" aria-label="Search plants">
+    </div>
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty">No plants found. Try a different search or category.</p>
+  </div>
+</section>
+
+<!-- PHOTO CAROUSEL -->
+<section id="gallery">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Photo Gallery</span>
+      <h2 class="title">A Glimpse of Our Nursery</h2>
+      <p class="sub">Fresh arrivals, garden projects and happy customers.</p>
+    </div>
+    <div class="carousel" id="carousel" aria-roledescription="carousel">
+      <div class="track" id="track"></div>
+      <button class="arrow prev" id="prev" aria-label="Previous">❮</button>
+      <button class="arrow next" id="next" aria-label="Next">❯</button>
+      <div class="dots" id="dots"></div>
+    </div>
+    <div class="thumbs" id="thumbs"></div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section id="videos">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Our Work</span>
+      <h2 class="title">See Our Work in Action</h2>
+      <p class="sub">Watch our nursery, plantation and landscaping projects.</p>
+    </div>
+    <div class="video-grid" id="videoGrid"></div>
+  </div>
+</section>
+
+<!-- CONTACT & QUOTATION -->
+<section id="contact">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Contact &amp; Quotation</span>
+      <h2 class="title">Get a Free Quotation</h2>
+      <p class="sub">Tell us what you need — plants, pots or a full garden — and we’ll get back with the best price.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="info-card">
+        <h3>Visit or Call Us</h3>
+        <p style="font-size:.92rem">We’re happy to help you choose the right plants.</p>
+        <div class="info-item"><div class="ic">📍</div><div><b>Address</b><span id="c-address"></span></div></div>
+        <div class="info-item"><div class="ic">📞</div><div><b>Phone</b><a id="c-phone" href="#"></a></div></div>
+        <div class="info-item"><div class="ic">💬</div><div><b>WhatsApp</b><a id="c-wa" href="#" target="_blank" rel="noopener"></a></div></div>
+        <div class="info-item"><div class="ic">✉️</div><div><b>Email</b><a id="c-email" href="#"></a></div></div>
+        <div class="info-item"><div class="ic">🕘</div><div><b>Hours</b><span id="c-hours"></span></div></div>
+        <div class="map" id="map">📍 Map will appear here</div>
+      </div>
+
+      <form class="form-card" id="quoteForm" novalidate>
+        <h3>Request a Quotation</h3>
+        <p class="sub" style="font-size:.9rem">Fill the details below. Your selected plants will be included automatically.</p>
+        <div class="row">
+          <div class="field"><label for="name">Full name *</label><input id="name" required autocomplete="name"></div>
+          <div class="field"><label for="phone">Phone / WhatsApp *</label><input id="phone" type="tel" required autocomplete="tel"></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="email">Email</label><input id="email" type="email" autocomplete="email"></div>
+          <div class="field"><label for="city">City / Location</label><input id="city"></div>
+        </div>
+        <div class="field">
+          <label for="type">Requirement</label>
+          <select id="type">
+            <option>Plants for home / personal use</option>
+            <option>Bulk plants (shops / events / gifting)</option>
+            <option>Garden landscaping / maintenance</option>
+            <option>Office / society / commercial project</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="selected">
+          <h4>🌿 Selected plants (<span id="selCount">0</span>)</h4>
+          <div class="sel-list" id="selList"></div>
+        </div>
+        <div class="field"><label for="message">Additional details</label><textarea id="message" placeholder="Quantity, sizes, area to be landscaped, delivery date, etc."></textarea></div>
+        <div class="msg" id="msg" role="status"></div>
+        <div class="form-actions">
+          <button type="button" class="btn btn-wa" id="sendWa">💬 Send on WhatsApp</button>
+          <button type="button" class="btn btn-primary" id="sendMail">✉️ Send by Email</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <h4 class="foot-brand"><img class="brand-icon" src="assets/ganesha-192.png" alt="" width="28" height="28"> Shri Vinayak Nursery</h4>
+        <p style="font-size:.92rem;max-width:340px">Growing healthier homes and greener spaces with quality plants and honest service.</p>
+      </div>
+      <div><h4>Quick Links</h4><ul>
+        <li><a href="#catalogue">Plant Catalogue</a></li><li><a href="#gallery">Gallery</a></li>
+        <li><a href="#videos">Our Work</a></li><li><a href="#contact">Get Quotation</a></li></ul></div>
+      <div><h4>Contact</h4><ul>
+        <li id="f-phone"></li><li id="f-email"></li><li id="f-address"></li></ul></div>
+    </div>
+    <div class="copy">© <span id="year"></span> Shri Vinayak Nursery. All rights reserved.</div>
+  </div>
+</footer>
+
+<a class="float-wa" id="floatWa" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+<a class="quote-fab" id="quoteFab" href="#contact">📝 Quote list (<span id="fabCount">0</span>)</a>
+
+<script src="js/utils.js"></script>
+<script src="js/defaults.js"></script>
+<script src="js/content.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/quote.js"></script>
+<script src="js/catalogue.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/videos.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
